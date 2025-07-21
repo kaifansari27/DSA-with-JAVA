@@ -13,6 +13,8 @@ public class SearchingIn2DArray {
         System.out.println(Arrays.toString(ans));
         int maxVal = max(arr);
         System.out.println(maxVal);
+        int minVal = min(arr);
+        System.out.println(minVal);
     }
     // for finding index value of the arrays
     static int[] search (int [][] arr , int target){
@@ -36,5 +38,20 @@ public class SearchingIn2DArray {
             }
         }
         return max;
+    }
+
+    // for finding minimum value...
+    
+
+    static int min(int [][] arr){
+        int min = Integer.MAX_VALUE;
+        for(int row = 0 ; row < arr.length ; row ++){
+            for (int col = 0 ; col < arr[row].length; col++){
+                if(arr[row][col] < min){
+                    min = arr[row][col];
+                }
+            }
+        }
+        return min;
     }
 }
