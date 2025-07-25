@@ -1,4 +1,4 @@
-// leetcode Question no - 852 
+// leetcode Question number - 852 
 
 public class MountainIndexInArrays {
     public static int mountainIndexInArrays(int[] arr) {
