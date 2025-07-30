@@ -1,7 +1,7 @@
 
 public class Pattern {
     public static void main(String[] args) {
-        pattern2(4);
+        pattern6(4);
     }
 
     static void pattern1(int n) {  
@@ -115,13 +115,13 @@ public class Pattern {
     /*
       patter6 output
      
-     * 
-     * *
-     * * *
-     * * * *
-     * * *
-     * *
-     * 
+   * 
+  * * 
+ * * * 
+* * * * 
+ * * * 
+  * * 
+   * 
 
      */
     static void pattern7(int n) {
