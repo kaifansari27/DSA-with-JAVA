@@ -1,7 +1,14 @@
 
 public class MergingnBothdfun {
     public static void main(String[] args) {
-        funBoth(5);
+        concept(8);
+    }
+    static void concept(int n){
+        if( n == 0){
+            return ;
+        }
+        System.out.print(n + " ");
+        concept(--n);
     }
     static void fun1(int n ){
         if(n == 0 ){
