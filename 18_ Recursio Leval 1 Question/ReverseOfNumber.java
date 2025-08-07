@@ -21,11 +21,26 @@ public class ReverseOfNumber {
             return n;
         }
         int rem = n % 10;
-        return rem * (int) (Math.pow(10, digit - 1)) + helper(n/10, digit - 1);
+        return rem * (int) (Math.pow(10, digit - 1)) + helper(n / 10, digit - 1);
+    }
+
+    static boolean palin(int n) {
+    int reverse  = rev2(n);
+        return n ==  reverse ;
     }
 
     public static void main(String[] args) {
-        System.out.println(rev2(8734));
+        // rev1(28396);
+        // System.out.println(sum);
+
+        // System.out.println(rev2(202849));
+        
+        int num = 1234321;
+        if (palin(num)) {
+            System.out.println(num + " Number is Palin: ");
+        }else{
+            System.out.println(num + " Number is Not Palin: ");
+        }
     }
 
 }
