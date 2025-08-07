@@ -1,4 +1,4 @@
-public class GCD_LCM {
+public class GCD {
     public static void main(String[] args) {
         System.out.println("Your GCD is:");
         System.out.println(gcd(4, 9));
