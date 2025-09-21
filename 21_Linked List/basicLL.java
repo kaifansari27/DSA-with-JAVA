@@ -1,6 +1,17 @@
 
 public class basicLL {
 
+    // jab only head diya ho and LL ka function  na diya ho 
+    public static void inserAtEnd(Node head , int val){
+        Node temp = new Node(val);
+        Node t = head;
+        // this is most IMP concept..
+        while(t.next != null){
+            t = t.next;
+        }
+        t.next = temp;
+    }
+
     // Diplaying Recursively 
 
     public static void displayRec( Node head){
@@ -54,6 +65,8 @@ public class basicLL {
         }*/
 
         // Displaying Recusively
+
+        inserAtEnd(a, 69);
 
         displayRec(a);
     }
