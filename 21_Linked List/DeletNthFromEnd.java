@@ -1,15 +1,23 @@
 public class DeletNthFromEnd {
-    public static void deleteNthFromEnd(Node head , int n){
+    public static Node deleteNthFromEnd(Node head , int n){
         Node fast = head;
         Node slow = head;
-        for(int i = 1 ; i < n  ; i++){
+        for(int i = 0 ; i < n  ; i++){
             fast = fast.next;
         }
+        // agar es LL ke hisab se index 6 dega to head delete hoga uske liye ek alag case banega
+
+        if(fast == null){
+            head = head.next;
+            return head;
+        }
+
         while(fast.next != null){
             slow = slow.next;
             fast = fast.next;
         }
         slow.next= slow.next.next;
+        return head;
         
     }
     public static class Node{
@@ -43,7 +51,7 @@ public class DeletNthFromEnd {
         e.next = f;
         display(a);  // 100 13 4 5 12 10
 
-        deleteNthFromEnd(a, 2);
+        a = deleteNthFromEnd(a, 6);
 
         display(a); // fir display kara diya deleted node
     }
