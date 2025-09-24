@@ -2,6 +2,7 @@ public class DeletNthFromEnd {
     public static Node deleteNthFromEnd(Node head , int n){
         Node fast = head;
         Node slow = head;
+        // now ham travel karenge 
         for(int i = 0 ; i < n  ; i++){
             fast = fast.next;
         }
@@ -11,7 +12,7 @@ public class DeletNthFromEnd {
             head = head.next;
             return head;
         }
-
+        // deleting node ....
         while(fast.next != null){
             slow = slow.next;
             fast = fast.next;
@@ -51,7 +52,7 @@ public class DeletNthFromEnd {
         e.next = f;
         display(a);  // 100 13 4 5 12 10
 
-        a = deleteNthFromEnd(a, 6);
+        a = deleteNthFromEnd(a, 6); //mai function deleteNthFromEnd ko call kar rha hu.
 
         display(a); // fir display kara diya deleted node
     }
