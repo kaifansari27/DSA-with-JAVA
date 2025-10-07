@@ -1,4 +1,4 @@
-// This is the Iterative Method Of Displaying Reverse Stack 
+// Iterative Method Of Displaying Reverse Stack 
 
 import java.util.*;
 public class StackReverse {
