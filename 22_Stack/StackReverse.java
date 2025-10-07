@@ -1,3 +1,5 @@
+// This is the Iterative Method Of Displaying Reverse Stack 
+
 import java.util.*;
 public class StackReverse {
     public static void main(String[] args) {
