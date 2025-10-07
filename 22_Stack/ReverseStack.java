@@ -1,4 +1,4 @@
-// Reverse Stack Recursivily 
+// Reverse Stack Using Recursion
 
 import java.util.*;
 
