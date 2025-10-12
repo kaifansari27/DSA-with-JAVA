@@ -7,12 +7,12 @@ public class LEETCODE_20 {
     /*public boolean ValidParanthesis(String s){
         while (true){
             if(s.contains("()")){
-                s.replace("()" , " ");
+                s = s.replace("()" , " ");
             }else if (s.contains("{}")){
-                s.replace("{}", " ");
+                s = s.replace("{}", " ");
             }
             else if (s.contains("[]")){
-                s.replace("[]" , " ");
+                s = s.replace("[]" , " ");
             }
             else {
                 return s.isEmpty();
