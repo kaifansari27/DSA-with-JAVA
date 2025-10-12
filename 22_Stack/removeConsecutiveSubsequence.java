@@ -15,7 +15,7 @@ public class removeConsecutiveSubsequence {
         int m = res.length ; // find the size
         // print in reverse for storing in array;
         for (int i = m-1 ; i >= 0 ; i--){
-            res[i] = st.pop();
+            res[i] = st.pop(); // putting stacks's Elements in res Arrays
         }
         return res;
 
