@@ -1,7 +1,8 @@
-public class LEETCODE_84{
-    public static void main(String[]args){
+public class LEETCODE_84 {
+    public static void main(String[] args) {
 
     }
+
     public int largestRectangleArea(int[] heights) {
         int n = heights.length;
         Stack<Integer> st = new Stack<>();
@@ -18,24 +19,28 @@ public class LEETCODE_84{
             while (!st.isEmpty() && heights[st.peek()] >= heights[i]) {
                 st.pop();
             }
-            if (st.isEmpty()) nse[i] = n;
-            else nse[i] = st.peek();
+            if (st.isEmpty())
+                nse[i] = n;
+            else
+                nse[i] = st.peek();
             st.push(i);
         }
 
-        // Emptying the  stack
+        // Emptying the stack
         st.clear();
 
         // calculating pse
         st.push(0);
         pse[0] = -1;
 
-        for (int i = 1; i < n; i++) {  // ✅ full range
+        for (int i = 1; i < n; i++) { // ✅ full range
             while (!st.isEmpty() && heights[st.peek()] >= heights[i]) {
                 st.pop();
             }
-            if (st.isEmpty()) pse[i] = -1;
-            else pse[i] = st.peek();
+            if (st.isEmpty())
+                pse[i] = -1;
+            else
+                pse[i] = st.peek();
             st.push(i);
         }
 
