@@ -1,3 +1,5 @@
+// infix in Stack Using Two Stack
+
 import java.util.*;
 public class infix {
     public static void main(String[] args) {
@@ -19,9 +21,9 @@ public class infix {
             else if (op.size() == 0 || ch == '(' || op.peek() == '(') {
                 op.push(ch);
             }
-            else if (ch == ')') {
+            else if (ch == ')') {  // agr peek par close bracket hai to matlab uske pahle open bracket hoga to uska kaam pahle khtm kar denge
                 //  FIX 2: Add check before peek to avoid EmptyStackException
-                while (!op.isEmpty() && op.peek() != '(') {
+                while (!op.isEmpty() && op.peek() != '(') { // and loop tab tak chalayenge jab peek par open bracket '(' na aa jaye
                     int v2 = val.pop();
                     int v1 = val.pop();
                     if (op.peek() == '-') val.push(v1 - v2);
