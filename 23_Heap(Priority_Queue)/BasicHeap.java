@@ -22,7 +22,7 @@ public class BasicHeap {
         System.out.println("Peek Element of the min Heap = " + minHeap.peek() + " ");
         System.out.println("Peek Element of the max Heap = " + maxHeap.peek() + " ");
 
-        // remove operation..
+        // remove operation on heap..
 
         minHeap.remove(1);
         System.out.println(minHeap );
