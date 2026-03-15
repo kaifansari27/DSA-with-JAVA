@@ -1,3 +1,7 @@
+// All Required Concept of Tree
+
+import java.util.*;
+
 public class TreeImplementation {
     public static class Node{
         int val;
@@ -52,6 +56,23 @@ public class TreeImplementation {
         nthLevel(root.right , n-1);
 
     }
+     
+     public static void BFS(Node root){
+        Queue<Node> q = new LinkedList<>();
+
+        if(root != null ) q.add(root);
+
+        while(!q.isEmpty()){
+            Node temp = q.peek();
+
+            if(temp.left != null) q.add( temp.left);
+            if(temp.right != null) q.add(temp.right);
+
+            System.out.print(temp.val + " ");
+
+            q.remove();
+        }
+     }
 
     public static void main(String[] args) {
         Node root = new Node(2);
@@ -77,11 +98,13 @@ public class TreeImplementation {
         
         // priting element of nth Level 
 
-        int level = Height(root) + 1;
-        for( int i = 0 ; i <= level ; i++){
-            nthLevel(root, i);
-            System.out.println();
-        }
+        // int level = Height(root) + 1;
+        // for( int i = 0 ; i <= level ; i++){
+        //     nthLevel(root, i);
+        //     System.out.println();
+        // }
+
+        BFS(root);
     }
 
      
